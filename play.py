@@ -51,4 +51,4 @@ def play_audio(file_path, second):
     play_obj = sa.play_buffer(wav_data, num_channels=one_second_audio.channels, bytes_per_sample=one_second_audio.sample_width, sample_rate=one_second_audio.frame_rate)
     play_obj.wait_done()  # 等待音频播放完成
 
-#play_voice(["あ", "い", "う", "え", "お", "か", "き", "く", "け", "こ"], "默認",1)
+play_voice(["あ", "い", "う", "え", "お", "か", "き", "く", "け", "こ"], "匿名L(默认)",1)
