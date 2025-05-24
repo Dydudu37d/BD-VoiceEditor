@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from tkinter import *
 import os
 import tkinter.messagebox as messagebox
@@ -156,9 +155,10 @@ class Application(Frame):
         self.mainmenu.add_cascade(label="Help", menu=self.helpmenu)
         
         # 创建列表框
-        self.voice = ["默認"]
+        self.voice = next(os.walk('./Songer'))[1]  # 获取当前目录下的所有文件夹名作为语音列表
+        print(self.voice)
         self.now_voive = StringVar()
-        self.now_voive.set("默認")
+        self.now_voive.set(self.voice[0])
         self.voice_list = OptionMenu(self.master, self.now_voive, *self.voice)
         self.voice_list.pack()
         self.voice_list.config(width=10)
